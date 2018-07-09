@@ -11,10 +11,10 @@ phases:
     build:
         commands:
             - echo Build started on `date`
-            - ng build --pro
+            - ng build --prod
     post_build:
          commands:
-            - aws s3 cp dist/hello-angular s3://${S3_BUCKET} --recursive
+            - aws s3 cp dist/hello-world s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
